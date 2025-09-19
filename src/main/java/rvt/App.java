@@ -5,8 +5,20 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 
 public class App {
     public static void main(String[] args) {
-        grades();
+        oddEven();
         
+    }
+
+    public static void oddEven(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a number:");
+        int num = Integer.valueOf(scanner.nextLine());
+
+        if (num % 2 == 0){
+            System.out.println("Number " + num + " is even");
+        } else if (num % 2 == 1) {
+            System.out.println("Number " + num + " is odd");
+        }
     }
 
     public static void grades(){
@@ -14,7 +26,7 @@ public class App {
         int grade = Integer.valueOf(scanner.nextLine());
         String answer = "impossible!";
 
-        if(grade < 0){
+        if (grade < 0){
             answer = "impossible!";
         } else if (grade <= 49) {
             answer = "failed";
