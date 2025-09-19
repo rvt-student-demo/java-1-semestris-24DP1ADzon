@@ -1,10 +1,37 @@
 package rvt;
 import java.util.Scanner;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
+
 public class App {
     public static void main(String[] args) {
-        avrgOf3();
+        grades();
         
+    }
+
+    public static void grades(){
+        Scanner scanner = new Scanner(System.in);
+        int grade = Integer.valueOf(scanner.nextLine());
+        String answer = "impossible!";
+
+        if(grade < 0){
+            answer = "impossible!";
+        } else if (grade <= 49) {
+            answer = "failed";
+        } else if (grade <= 59) {
+            answer = "1";
+        } else if (grade <= 69) {
+            answer = "2";
+        } else if (grade <= 79) {
+            answer = "3";
+        } else if (grade <= 89) {
+            answer = "4";
+        } else if (grade <= 99) {
+            answer = "5";
+        } else if (grade > 100) {
+            answer = "incredible!"; 
+        }
+        System.out.println(answer);
     }
 
     public static void addition(){
