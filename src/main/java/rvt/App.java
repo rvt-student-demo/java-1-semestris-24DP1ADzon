@@ -5,8 +5,20 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 
 public class App {
     public static void main(String[] args) {
-        oddEven();
+        password();
         
+    }
+
+    public static void password(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Password?");
+        String userinpt = scanner.nextLine();
+
+        if (userinpt.equals("Caput Draconis")){
+            System.out.println("Welcome!");
+        } else{
+            System.out.println("Off with you!");
+        }
     }
 
     public static void oddEven(){
