@@ -3,7 +3,31 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        detalas();
+        delikatese();
+    }
+
+    public static void delikatese(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ievadi preci: ");
+        String prece = scanner.nextLine();
+        System.out.println("Ievadi cenu: ");
+        double cena = Double.valueOf(scanner.nextLine());
+        System.out.println("Ekspress piegade (0==ne, 1==ja):");
+        int express = Integer.valueOf(scanner.nextLine());
+        System.out.println("\n");
+        double piegade = 0;
+        
+        System.out.println("Rekins:");
+        System.out.println("  " + prece +  "  " + cena);
+
+        if(cena < 10){
+            piegade += 2;
+        } 
+        if (express == 1){
+            piegade += 3;
+        }
+        System.out.println("  piegade:  " + piegade);
+        System.out.println("  kopa:  " + (cena + piegade));
     }
 
     public static void detalas(){
@@ -24,10 +48,8 @@ public class App {
         paplaksnes = Integer.valueOf(scanner.nextLine());
 
         if(uzgriezni > skruves && paplaksnes / 2 > skruves ){
-            System.out.println("Parbaudi pasutijumu: Pasutijums ir kartiba");
-            
+            System.out.println("Parbaudi pasutijumu: Pasutijums ir kartiba");      
         } else {
-
             if(uzgriezni < skruves) {
                 System.out.println("Parbaudi pasutijumu: Par maz uzgrieznu");
             } if (paplaksnes / 2 < skruves) {
