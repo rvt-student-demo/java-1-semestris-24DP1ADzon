@@ -3,9 +3,41 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        giftTax();
-        
+        detalas();
     }
+
+    public static void detalas(){
+        Scanner scanner = new Scanner(System.in);
+        final int skruvjuCena = 5;
+        final int uzgrieznuCena = 3;
+        final int paplaksnesCena = 1;
+        
+        int skruves;
+        int uzgriezni;
+        int paplaksnes;
+
+        System.out.println("Skruvju skaits:");
+        skruves = Integer.valueOf(scanner.nextLine());
+        System.out.println("Uzgrieznu skaits:");
+        uzgriezni = Integer.valueOf(scanner.nextLine());
+        System.out.println("Paplaksnu skaits:");
+        paplaksnes = Integer.valueOf(scanner.nextLine());
+
+        if(uzgriezni > skruves && paplaksnes / 2 > skruves ){
+            System.out.println("Parbaudi pasutijumu: Pasutijums ir kartiba");
+            
+        } else {
+
+            if(uzgriezni < skruves) {
+                System.out.println("Parbaudi pasutijumu: Par maz uzgrieznu");
+            } if (paplaksnes / 2 < skruves) {
+                System.out.println("Parbaudi pasutijumu: Par maz paplaksnu");
+            }
+        }
+
+        System.out.println("Kopeja cena: " + (skruves * skruvjuCena) + (uzgriezni * uzgrieznuCena) + (paplaksnes * paplaksnesCena) + " centi");
+    }
+        
 
     public static void giftTax(){
         Scanner scanner = new Scanner(System.in);
