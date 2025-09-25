@@ -14,11 +14,11 @@ public class App {
         while(true){
             System.out.println("Give a number:");
             int num = Integer.valueOf(scanner.nextLine());
-            sum += num;
-            numAmount += 1;
-            if(num == 4){
+            if(num == 0){
                 break;
             }
+            sum += num;
+            numAmount += 1;
         }
     
         System.out.println("Number of number: " + numAmount);
