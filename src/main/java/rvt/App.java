@@ -3,9 +3,28 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        delikatese();
+        numAndSum();
     }
-
+    
+    public static void numAndSum(){
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int numAmount = 0;
+    
+        while(true){
+            System.out.println("Give a number:");
+            int num = Integer.valueOf(scanner.nextLine());
+            sum += num;
+            numAmount += 1;
+            if(num == 4){
+                break;
+            }
+        }
+    
+        System.out.println("Number of number: " + numAmount);
+        System.out.println("Sum of the numbers: " + sum);
+    }
+    
     public static void delikatese(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ievadi preci: ");
