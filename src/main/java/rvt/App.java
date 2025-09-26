@@ -1,9 +1,32 @@
 package rvt;
+import java.util.Random;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        repBreakRemembering();
+        game();
+    }
+
+    public static void game(){
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        int num = random.nextInt(10) + 1;
+        for(int i = 0; i <= 3; i++){
+            if(i == 3){
+                System.out.println("Pareizais skaitlis bija " + num);
+                break;
+            }
+            System.out.println("Ievadi minējumu: ");
+            int minejums = Integer.valueOf(scanner.nextLine());
+
+            if(minejums == num){
+                System.out.println("PAREIZI!");
+                System.out.println("Tu esi uzvarējis spēli!");
+            } else{
+                System.out.println("nepareizi");
+            }
+        
+        }
     }
 
     public static void repBreakRemembering(){
