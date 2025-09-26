@@ -3,7 +3,35 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        repBreakRemembering();
+    }
+
+    public static void repBreakRemembering(){
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int numAmount = 0;
+        int odd = 0;
+        int even = 0;
         
+        while(true){
+            int num = Integer.valueOf(scanner.nextLine());
+            if(num == -1){
+                System.out.println("Thx! Bye!");
+                System.out.println("Sum: " + sum);
+                System.out.println("Numbers: " + numAmount);
+                System.out.println("Average: " + ((double) sum / numAmount));
+                System.out.println("Even: " + even);
+                System.out.println("Odd: " + odd);
+                break;
+            }
+            sum += num;
+            numAmount++;
+            if((num % 2) == 0) {
+                even += 1;
+            } else{
+                odd += 1;
+            }
+        }
     }
 
     public static void counting(){
