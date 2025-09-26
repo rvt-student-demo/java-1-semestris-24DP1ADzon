@@ -11,6 +11,10 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int num = random.nextInt(10) + 1;
+
+        System.out.println("Es domāju par skaitli no 1 līdz 10.");
+        System.out.println("Tev tas jāuzmin trīs mēģinājumos.");
+
         for(int i = 0; i <= 3; i++){
             if(i == 3){
                 System.out.println("Pareizais skaitlis bija " + num);
@@ -27,6 +31,7 @@ public class App {
             }
         
         }
+        scanner.close();
     }
 
     public static void repBreakRemembering(){
@@ -55,6 +60,7 @@ public class App {
                 odd += 1;
             }
         }
+        scanner.close();
     }
 
     public static void counting(){
@@ -64,6 +70,7 @@ public class App {
         for(int i = 0; i <= num; i++){
             System.out.println(i);
         }
+        scanner.close();
     }
     
     public static void numAndSum(){
@@ -83,6 +90,7 @@ public class App {
     
         System.out.println("Number of number: " + numAmount);
         System.out.println("Sum of the numbers: " + sum);
+        scanner.close();
     }
     
     public static void delikatese(){
@@ -107,6 +115,7 @@ public class App {
         }
         System.out.println("  piegade:  " + piegade);
         System.out.println("  kopa:  " + (cena + piegade));
+        scanner.close();
     }
 
     public static void detalas(){
@@ -137,6 +146,7 @@ public class App {
         }
 
         System.out.println("Kopeja cena: " + (skruves * skruvjuCena) + (uzgriezni * uzgrieznuCena) + (paplaksnes * paplaksnesCena) + " centi");
+        scanner.close();
     }
         
 
@@ -161,6 +171,7 @@ public class App {
         }
 
         System.out.println("Tax: " + tax);
+        scanner.close();
     }
 
     public static void password(){
@@ -173,6 +184,7 @@ public class App {
         } else{
             System.out.println("Off with you!");
         }
+        scanner.close();
     }
 
     public static void oddEven(){
@@ -185,6 +197,7 @@ public class App {
         } else if (num % 2 == 1) {
             System.out.println("Number " + num + " is odd");
         }
+        scanner.close();
     }
 
     public static void grades(){
@@ -210,6 +223,7 @@ public class App {
             answer = "incredible!"; 
         }
         System.out.println(answer);
+        scanner.close();
     }
 
     public static void addition(){
@@ -245,6 +259,7 @@ public class App {
         double result = (num1 + num2 + num3) / 3.0;
 
         System.out.println("The average is " + result);
+        scanner.close();
 
     }
 }
