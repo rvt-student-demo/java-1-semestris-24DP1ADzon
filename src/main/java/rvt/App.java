@@ -4,7 +4,21 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        game();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ievadi divus skaitļus:");
+        int num1 = Integer.valueOf(scanner.nextLine());
+        int num2 = Integer.valueOf(scanner.nextLine());
+        scanner.close();
+
+        dividibleByThree(num1, num2);
+    }
+
+    public static void dividibleByThree(int num1, int num2){
+        for(int i = num1; i <= num2; i++){
+            if(i % 3 == 0){
+                System.out.println(i);
+            }
+        }
     }
 
     public static void game(){
