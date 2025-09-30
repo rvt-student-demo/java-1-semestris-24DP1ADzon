@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Ievadi divus skaitļus:");
-        int num1 = Integer.valueOf(scanner.nextLine());
-        int num2 = Integer.valueOf(scanner.nextLine());
-        scanner.close();
+        printfromParameterToOne(5);
+    }
 
-        dividibleByThree(num1, num2);
+    public static void printfromParameterToOne(int num){
+        for(int i = num; i > 0; i--) {
+            System.out.println(i);
+        }
     }
 
     public static void dividibleByThree(int num1, int num2){
