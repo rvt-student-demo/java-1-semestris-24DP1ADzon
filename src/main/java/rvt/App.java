@@ -4,7 +4,12 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        printfromParameterToOne(5);
+        printSpaces(5);
+    }
+    public static void printSpaces(int num){
+        for(int i = 0; i < num; i++){
+            System.out.print(" ");
+        }
     }
 
     public static void printfromParameterToOne(int num){
