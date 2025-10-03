@@ -4,14 +4,19 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        printTriangle(4);
+        christmasTree(10);
     }
 
-    public static void printTriangle(int size){
-        size++;
-        for(int i = 1; i < size; i++){
+    public static void christmasTree(int size){
+        for(int i = 0; i < size; i++){
             printSpaces(size - i);
-            printStars(i);
+            printStars(2 * i + 1);
+            System.out.print("\n");
+        }
+        size--;
+        for(int i = 0; i < 2; i++){
+            printSpaces(size);
+            printStars(3);
             System.out.print("\n");
         }
     }
