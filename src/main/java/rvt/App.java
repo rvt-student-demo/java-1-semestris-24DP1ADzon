@@ -4,11 +4,27 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        printSpaces(5);
+        printTriangle(4);
     }
+
+    public static void printTriangle(int size){
+        size++;
+        for(int i = 1; i < size; i++){
+            printSpaces(size - i);
+            printStars(i);
+            System.out.print("\n");
+        }
+    }
+
     public static void printSpaces(int num){
         for(int i = 0; i < num; i++){
             System.out.print(" ");
+        }
+    }
+
+    public static void printStars(int num){
+        for(int i = 0; i < num; i++){
+            System.out.print("*");
         }
     }
 
@@ -168,7 +184,6 @@ public class App {
         scanner.close();
     }
         
-
     public static void giftTax(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Gift value?");
