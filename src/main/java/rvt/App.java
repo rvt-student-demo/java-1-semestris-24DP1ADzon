@@ -4,13 +4,23 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        swap();
+        int[] numbers = {5, 1, 3, 4, 2};
+        int result = sumOfArray(numbers);
+        System.out.println(result);
+    }
+
+    public static int sumOfArray(int[] array){
+        int sum = 0;
+        for(int i = 0; i < array.length; i++){
+            sum += array[i];
+        }
+        return sum;
     }
 
     public static void swap(){
         Scanner scanner = new Scanner(System.in);
         int[] numbers = {1, 3, 5, 7, 9};
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < numbers.length; i++){
             System.out.println(numbers[i]);
         }
 
@@ -23,7 +33,7 @@ public class App {
         numbers[ind1] = numbers[ind2];
         numbers[ind2] = boofer;
 
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < numbers.length; i++){
             System.out.println(numbers[i]);
         }
         scanner.close();
