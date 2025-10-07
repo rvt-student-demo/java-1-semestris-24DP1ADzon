@@ -4,7 +4,29 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        christmasTree(10);
+        swap();
+    }
+
+    public static void swap(){
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = {1, 3, 5, 7, 9};
+        for(int i = 0; i < 5; i++){
+            System.out.println(numbers[i]);
+        }
+
+        System.out.println("Give two indices to swap:");
+        int ind1 = Integer.valueOf(scanner.nextLine());
+        int ind2 = Integer.valueOf(scanner.nextLine());
+        System.out.println();
+        
+        int boofer = numbers[ind1];
+        numbers[ind1] = numbers[ind2];
+        numbers[ind2] = boofer;
+
+        for(int i = 0; i < 5; i++){
+            System.out.println(numbers[i]);
+        }
+        scanner.close();
     }
 
     public static void christmasTree(int size){
