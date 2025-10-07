@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         int[] numbers = {5, 1, 3, 4, 2};
-        int result = sumOfArray(numbers);
-        System.out.println(result);
+        Printer printer = new Printer();
+        printer.printInStars(numbers);
     }
 
     public static int sumOfArray(int[] array){
