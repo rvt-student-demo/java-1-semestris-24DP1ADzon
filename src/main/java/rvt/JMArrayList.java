@@ -3,7 +3,7 @@ import java.util.*;
 
 public class JMArrayList {
     public static void main(String[] args){
-        onlyTheseNumber();
+        listSize();
     }
 
     public static void onlyTheseNumber(){
@@ -22,5 +22,18 @@ public class JMArrayList {
         for(int i = from; i <= to; i++){
             System.out.println(numbers.get(i));
         }
+    }
+
+    public static void listSize(){
+        ArrayList<String> names = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        String inpt = scanner.nextLine();
+
+        while (inpt != "") {
+        names.add(inpt);
+        inpt = scanner.nextLine();
+        }
+
+        System.out.println("In total: " + names.size());
     }
 }
