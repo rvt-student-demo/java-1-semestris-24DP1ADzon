@@ -23,8 +23,7 @@ public class Connecticut{
         for(int i = 0; i < val.length; i++){
             twice[i] = val[i] * 2;
         }
-
-    
+            
         System.out.println( "New Array: " 
             + twice[0] + " " + twice[1] + " " + twice[2] + " " + twice[3] );
 
