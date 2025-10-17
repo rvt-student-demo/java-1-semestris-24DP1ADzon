@@ -3,7 +3,7 @@ import java.util.*;
 
 public class JMArrayList {
     public static void main(String[] args){
-        listSize();
+        onTheList();
     }
 
     public static void onlyTheseNumber(){
@@ -35,5 +35,24 @@ public class JMArrayList {
         }
 
         System.out.println("In total: " + names.size());
+    }    
+    
+    public static void onTheList(){
+        ArrayList<String> names = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        String inpt = scanner.nextLine();
+
+        while (inpt != "") {
+            names.add(inpt);
+            inpt = scanner.nextLine();
+        }
+
+        System.out.print("Search for?: ");
+        String name = scanner.nextLine();
+        if(names.contains(name)){
+            System.out.println(name + " was found!");
+        } else{
+            System.out.println(name + " was not found!");
+        }
     }
 }
