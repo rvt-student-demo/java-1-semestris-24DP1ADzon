@@ -1,9 +1,21 @@
 package rvt;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class JMArrayList {
     public static void main(String[] args){
-        onTheList();
+        ArrayList<String> strings = new ArrayList<>();
+
+        strings.add("First");
+        strings.add("Second");
+        strings.add("Third");
+
+        System.out.println(strings);
+
+        removeLast(strings);
+        removeLast(strings);
+
+        System.out.println(strings);
     }
 
     public static void onlyTheseNumber(){
@@ -54,5 +66,9 @@ public class JMArrayList {
         } else{
             System.out.println(name + " was not found!");
         }
+    }
+
+    public static void removeLast(ArrayList<String> strings){
+        strings.remove(strings.getLast());
     }
 }
