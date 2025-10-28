@@ -42,8 +42,8 @@ public class JMArrayList {
         String inpt = scanner.nextLine();
 
         while (inpt != "") {
-        names.add(inpt);
-        inpt = scanner.nextLine();
+            names.add(inpt);
+            inpt = scanner.nextLine();
         }
 
         System.out.println("In total: " + names.size());
