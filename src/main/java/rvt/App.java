@@ -1,7 +1,7 @@
 package rvt;
 import java.util.Random;
 import java.util.Scanner;
-
+// git push test
 public class App {
     public static void main(String[] args) {
         int[] numbers = {5, 1, 3, 4, 2};
