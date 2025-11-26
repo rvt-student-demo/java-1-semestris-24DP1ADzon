@@ -26,7 +26,6 @@ public class MainProgram {
 
         }
 
-        
         System.out.println("Sum: " + statisticsSum.sum());
         System.out.println("Sum of even numbers: " + statisticsEven.sum());
         System.out.println("Sum of odd numbers: " + statisticsOdd.sum());
