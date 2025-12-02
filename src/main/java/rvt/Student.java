@@ -2,7 +2,7 @@ package rvt;
 
 public class Student {
     private String name;
-    int age;
+    private int age;
     // konstruktora metode
     // tiek izsaukta objekta veidošanas laikā
     // Java izveido priekš mums tukšo konstruktora metodi
@@ -12,8 +12,28 @@ public class Student {
         age = age_;
     }
 
+    public int getAge(){ // getter
+        return this.age;
+    }
+
+    public String getname(){ // getter
+        return this.name;
+    }
+
+    public void setAge(int age){ // setter
+        this.age = age;
+    }
+
+    public void setName(String name){ // setter
+        this.name = name;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public String toString(){
+        return "String"; // toString() metodei vienmēr jābūt public
     }
 
     public void introduce(){
