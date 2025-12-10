@@ -1,15 +1,22 @@
 package rvt;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        int[] numbers = {5, 1, 3, 4, 2};
-        int[] b = numbers;
-        b = new int[5];
-        b[2] = 6;
-        System.out.println(numbers[2]);
-        System.out.println(b[2]);
+        ArrayList<Person> persons = new ArrayList<>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student2("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+
+        printPersons(persons);
+    }
+
+    
+    public static void printPersons(ArrayList<Person> persons){
+        for (int i = 0; i < persons.size(); i++) {
+            System.out.println(persons.get(i));   
+        }
     }
 
     public static int sumOfArray(int[] array){
