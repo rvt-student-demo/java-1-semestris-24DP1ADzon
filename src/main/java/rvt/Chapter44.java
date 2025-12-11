@@ -129,11 +129,9 @@ public class Chapter44 {
         word = scanner.nextLine();
         System.out.println();
         
-        int i = 0;
-        while(!word.endsWith(" ")){
+        for(int i = 0; i < word.length(); i++) {
             System.out.println(word);
-            word = word.substring(0, i) + " " + word.substring(i--, word.length() - 2);
-            i++;
+            word = word.substring(0, i) + " " + word.substring(i + 1, word.length() - 1);
         }
         
         scanner.close();
