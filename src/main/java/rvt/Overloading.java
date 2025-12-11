@@ -3,7 +3,7 @@ package rvt;
 public class Overloading {
 
     public static void main(String[] args) {
-        Overloading person = new Overloading("Nigger", 15);
+        Overloading person = new Overloading("Vards", 15);
         person.growOlder();
         person.printPerson();
         person.growOlder(10);

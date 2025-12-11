@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Chapter44 {
     public static void main(String[] args) {
-        ex4();
+        ex6();
     }
 
     public static void ex1(){
@@ -76,5 +76,51 @@ public class Chapter44 {
         }
 
         System.out.println(minutes + ":" + seconds);
+        scanner.close();
+    }
+
+    public static void ex6(){
+        String output, password;
+        boolean hasDigit, hasUppercase, hasLowerCase;
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Enter your password:");
+            password = scanner.nextLine();
+            hasDigit = false;
+            hasUppercase = false;
+            hasLowerCase = false;
+
+            for(int i = 0; i < password.length(); i++){
+                if(Character.isDigit(password.charAt(i))){
+                    hasDigit = true;
+                } else if(Character.isLowerCase(password.charAt(i))){
+                    hasLowerCase = true;
+                } else if(Character.isUpperCase(password.charAt(i))){
+                    hasUppercase = true;
+                }
+            }
+
+            if(password.length() >= 7){
+                if(hasLowerCase && hasUppercase){
+                    if(hasDigit){
+                        System.out.println("That password is acceptable.");
+                        break;
+                    } else{
+                        output = "That password is not acceptable.";
+                    }
+                } else{
+                    output = "That password is not acceptable.";
+                }
+            } else{
+                output = "That password is not acceptable.";
+            }
+
+            System.out.println(output);
+        }
+    }
+
+    public static void ex7(){
+        
     }
 }
