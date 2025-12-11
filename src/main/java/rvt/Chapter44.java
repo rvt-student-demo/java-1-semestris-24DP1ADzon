@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Chapter44 {
     public static void main(String[] args) {
-        ex6();
+        ex7();
     }
 
     public static void ex1(){
@@ -118,9 +118,24 @@ public class Chapter44 {
 
             System.out.println(output);
         }
+        scanner.close();
     }
 
     public static void ex7(){
+        String word;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a word --> ");
+        word = scanner.nextLine();
+        System.out.println();
         
+        int i = 0;
+        while(!word.endsWith(" ")){
+            System.out.println(word);
+            word = word.substring(0, i) + " " + word.substring(i--, word.length() - 2);
+            i++;
+        }
+        
+        scanner.close();
     }
 }
